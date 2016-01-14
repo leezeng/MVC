@@ -4,13 +4,13 @@
 
 #pragma once
 
-
+#include "exampleController.h"
 // CexampleDlg dialog
-class CexampleDlg : public CDialogEx
+class CExampleDlg : public CDialogEx
 {
 // Construction
 public:
-	CexampleDlg(CWnd* pParent = NULL);	// standard constructor
+	CExampleDlg(CWnd* pParent = NULL);	// standard constructor
 
 // Dialog Data
 	enum { IDD = IDD_EXAMPLE_DIALOG };
@@ -29,4 +29,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedOk();
 };

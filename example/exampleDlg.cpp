@@ -48,27 +48,28 @@ END_MESSAGE_MAP()
 
 
 
-CexampleDlg::CexampleDlg(CWnd* pParent /*=NULL*/)
-	: CDialogEx(CexampleDlg::IDD, pParent)
+CExampleDlg::CExampleDlg(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CExampleDlg::IDD, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CexampleDlg::DoDataExchange(CDataExchange* pDX)
+void CExampleDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CexampleDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CExampleDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CExampleDlg::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
 // CexampleDlg message handlers
 
-BOOL CexampleDlg::OnInitDialog()
+BOOL CExampleDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -102,7 +103,7 @@ BOOL CexampleDlg::OnInitDialog()
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CexampleDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CExampleDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -119,7 +120,7 @@ void CexampleDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CexampleDlg::OnPaint()
+void CExampleDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -146,8 +147,15 @@ void CexampleDlg::OnPaint()
 
 // The system calls this function to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CexampleDlg::OnQueryDragIcon()
+HCURSOR CExampleDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CExampleDlg::OnBnClickedOk()
+{
+	// TODO: Add your control notification handler code here
+	CExampleController::GetInstance();
+}
