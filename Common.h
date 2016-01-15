@@ -2,9 +2,9 @@
 #include "IModel.h"
 #include "IController.h"
 #include "InstanceMap.h"
-
+const char ControllerName[]="Controller";
 extern const char ModelName[];
-extern InstanceMap<IModel,ModelName> _Model_;
+InstanceMap<IModel,ModelName> _Model_;
 
 
 
