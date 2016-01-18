@@ -7,7 +7,7 @@ class InstanceMap
 {
 public:
 	InstanceMap();
-	void insert(std::pair<std::string,T*> item);
+	void insert(std::pair<std::string,T*>& item);
 	T* find(const std::string& key);
 	virtual ~InstanceMap(void);
 	void remove(const std::string& key);

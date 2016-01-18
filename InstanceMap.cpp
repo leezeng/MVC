@@ -27,7 +27,7 @@ InstanceMap<T, NAME>::InstanceMap():m_pMapInstance(nullptr)
 
 
 template<class T,const char NAME[]>
-void InstanceMap<T, NAME>::insert(std::pair<std::string,T*> item)
+void InstanceMap<T, NAME>::insert(std::pair<std::string,T*>& item)
 {
 	m_pMapInstance->insert(item); 
 }
