@@ -14,6 +14,7 @@
     <ProjectGuid>{0177E5F0-CD7C-45B1-87F3-87B78CE21D63}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ex3</RootNamespace>
+    <ProjectName>Command</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
